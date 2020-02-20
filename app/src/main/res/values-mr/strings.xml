@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">POSBilling Application</string>
+    <string name="ankur">अनकुर</string>
+    <string name="enter_phone_number">फोन नंबर प्रविष्ट करा</string>
+    <string name="please_enter_your_mobile_number">कृपया आपला मोबाइल नंबर प्रविष्ट करा</string>
+    <string name="please_enter_otp">कृपया ओटीपी प्रविष्ट करा</string>
+</resources>
