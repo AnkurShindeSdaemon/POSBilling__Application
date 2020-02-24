@@ -16,7 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/toolbar_title"
@@ -24,10 +30,10 @@
                 android:layout_height="wrap_content"
                 android:text="Home Screen"
                 android:textColor="@color/colorBlack"
-                android:textSize="@dimen/_23sdp"
-                android:textStyle="bold"
-                android:layout_marginBottom="@dimen/_10sdp" />
-
+                android:textSize="@dimen/_20sdp"
+                android:fontFamily="@font/myriadprobold"
+                 />
+            </RelativeLayout>
 
 
         </androidx.appcompat.widget.Toolbar>

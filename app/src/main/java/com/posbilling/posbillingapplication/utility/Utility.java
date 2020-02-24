@@ -26,6 +26,14 @@ public class Utility {
     }
 
 
+    public boolean isContactValid(String contact) {
+        if (contact.matches("\\d{10}"))
+            return true;
+        else
+            return false;
+    }
+
+
     public void showSnackbar(View view, String message) {
         Snackbar snackbar = Snackbar.make(view, message, Snackbar.LENGTH_LONG);
         snackbar.show();

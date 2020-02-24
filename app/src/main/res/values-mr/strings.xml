@@ -4,5 +4,41 @@
     <string name="ankur">अनकुर</string>
     <string name="enter_phone_number">फोन नंबर प्रविष्ट करा</string>
     <string name="please_enter_your_mobile_number">कृपया आपला मोबाइल नंबर प्रविष्ट करा</string>
-    <string name="please_enter_otp">कृपया ओटीपी प्रविष्ट करा</string>
+    <string name="please_enter_otp">कृपया आपल्या नोंदणीकृत मोबाइल क्रमांकावर प्राप्त ओटीपी प्रविष्ट करा.</string>
+    <string name="title_activity_dashboard">ActivityDashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_customer_name">ग्राहक नाव प्रविष्ट करा.</string>
+    <string name="enter_amount">रक्कम प्रविष्ट करा.</string>
+    <string name="enter_purpose">हेतू प्रविष्ट करा.</string>
+    <string name="submit">Sumit</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name = "RAMU_MUNIMJI">Ramu Munimji</string>
+    <string name="PLEASE_ENTER_MOBILE_NUMBER">कृपया मोबाइल नंबर प्रविष्ट करा.</string>
+    <string name="please_check_internet">कृपया आपले इंटरनेट कनेक्शन तपासा.</string>
+    <string name="please_enter_10_digit_mobile_number">कृपया 10 अंकी मोबाइल नंबर प्रविष्ट करा.</string>
+    <string name="please_enter_4_digit_otp">कृपया 4 अंकी ओटीपी प्रविष्ट करा.</string>
+
+
+    <string name="menu_outstanding">outstanding</string>
+    <string name="menu_payment_received">Payment received</string>
+    <string name="menu_sale">Sale</string>
+    <string name="menu_expenses">Expenses</string>
+    <string name="menu_reports">Reports</string>
+    <string name="menu_other">Other</string>
+    <string name="menu_add_customer">Add customer</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_logout">Logout</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.activity.dashboard.ui.send;
+package com.posbilling.posbillingapplication.activity.dashboard.ui.other;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.posbilling.posbillingapplication.R;
 
-public class SendFragment extends Fragment {
+public class FragmentOther extends Fragment {
 
     private SendViewModel sendViewModel;
 
@@ -22,7 +22,7 @@ public class SendFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         sendViewModel =
                 ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        View root = inflater.inflate(R.layout.fragment_other, container, false);
         final TextView textView = root.findViewById(R.id.text_send);
         sendViewModel.getText().observe(this, new Observer<String>() {
             @Override

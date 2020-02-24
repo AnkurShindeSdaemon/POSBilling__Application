@@ -8,8 +8,11 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public abstract class BaseFragment extends Fragment {
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
+public abstract class BaseFragment extends Fragment {
+    private Unbinder unbinder;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,5 +38,18 @@ public abstract class BaseFragment extends Fragment {
         if (getPresenter() != null)
             getPresenter().onPause();
         super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (unbinder != null)
+            unbinder.unbind();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        unbinder = ButterKnife.bind(this, getView());
     }
 }

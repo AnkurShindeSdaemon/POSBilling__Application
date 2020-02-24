@@ -1,18 +1,18 @@
 package com.posbilling.posbillingapplication.activity.splash;
 
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.WindowManager;
 
 import com.posbilling.posbillingapplication.R;
+import com.posbilling.posbillingapplication.activity.login.ActivityLogin;
 import com.posbilling.posbillingapplication.utility.BaseActivity;
 import com.posbilling.posbillingapplication.utility.BasePresenter;
 
 public class ActivitySplash extends BaseActivity {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    private final int SPLASH_SCREEN_TIMEOUT = 2000;
 
     @Override
     protected BasePresenter getPresenter() {
@@ -27,5 +27,23 @@ public class ActivitySplash extends BaseActivity {
     @Override
     protected void setPresenter() {
 
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        splashscreenDelayRun();
+    }
+
+    private void splashscreenDelayRun() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(ActivitySplash.this, ActivityLogin.class);
+                startActivity(intent);
+                ActivitySplash.this.finish();
+            }
+        }, SPLASH_SCREEN_TIMEOUT);
     }
 }

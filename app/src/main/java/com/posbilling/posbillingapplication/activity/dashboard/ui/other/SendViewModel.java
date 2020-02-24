@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.activity.dashboard.ui.send;
+package com.posbilling.posbillingapplication.activity.dashboard.ui.other;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

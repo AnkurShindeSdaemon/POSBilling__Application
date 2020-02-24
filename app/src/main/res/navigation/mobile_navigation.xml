@@ -3,41 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_outStanding">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_outStanding"
+        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.outstanding.FragmentOutstanding"
+        android:label="@string/menu_outstanding"
+        tools:layout="@layout/fragment_outstanding" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_payment_received"
+        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.paymentreceived.FragmentPaymentReceived"
+        android:label="@string/menu_payment_received"
+        tools:layout="@layout/fragment_payment_received" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_sale"
+        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.sale.FragmentSale"
+        android:label="@string/menu_sale"
+        tools:layout="@layout/fragment_sale" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:id="@+id/nav_expenses"
+        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.expenses.FragmentExpenses"
+        android:label="@string/menu_expenses"
+        tools:layout="@layout/fragment_expenses" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_reports"
+        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.reports.FragmentReports"
+        android:label="@string/menu_reports"
+        tools:layout="@layout/fragment_reports" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/nav_other"
+        android:name="com.posbilling.posbillingapplication.activity.dashboard.ui.other.FragmentOther"
+        android:label="@string/menu_other"
+        tools:layout="@layout/fragment_other" />
 </navigation>

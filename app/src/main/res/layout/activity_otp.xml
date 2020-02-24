@@ -15,7 +15,10 @@
         android:layout_above="@id/otp_view"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="@dimen/_26sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_18sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_16sdp"
         />
 
@@ -38,6 +41,7 @@
     <!--app:bar_inactive_color=""-->
 
     <ImageView
+        android:id="@+id/imageview_next"
         android:layout_width="@dimen/_48sdp"
         android:layout_height="@dimen/_48sdp"
         android:layout_below="@id/otp_view"
