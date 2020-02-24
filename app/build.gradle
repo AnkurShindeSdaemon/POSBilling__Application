@@ -76,5 +76,7 @@ dependencies {
     // Add the Firebase SDK for Crashlytics.
     implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
 
+    //toggle button
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
 
 }
