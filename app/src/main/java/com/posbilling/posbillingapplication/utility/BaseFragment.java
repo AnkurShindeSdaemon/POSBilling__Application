@@ -1,6 +1,7 @@
 package com.posbilling.posbillingapplication.utility;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import androidx.fragment.app.Fragment;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+
+import static com.posbilling.posbillingapplication.utility.Constants.LOGPOS;
 
 public abstract class BaseFragment extends Fragment {
     private Unbinder unbinder;
@@ -51,5 +54,10 @@ public abstract class BaseFragment extends Fragment {
     public void onStart() {
         super.onStart();
         unbinder = ButterKnife.bind(this, getView());
+    }
+
+
+    public void setError(String error){
+        Log.e(LOGPOS, "setError: "+error );
     }
 }

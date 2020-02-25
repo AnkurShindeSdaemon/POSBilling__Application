@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -27,6 +29,9 @@ import butterknife.BindView;
 public class ActivityDashboard extends BaseActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private FragmentManager fragmentManager = getSupportFragmentManager();
+    private FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    private NavController navControllerChange;
 
     @BindView(R.id.toolbar_title)
     TextView toolbar_title;
@@ -71,6 +76,7 @@ public class ActivityDashboard extends BaseActivity {
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        navControllerChange = navController;
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         NavigationMenuView navMenuView = (NavigationMenuView) navigationView.getChildAt(0);
@@ -102,6 +108,17 @@ public class ActivityDashboard extends BaseActivity {
             }
         }
     }
+
+    /*public void onNavigationChange(){
+        *//*NavHostFragment host = NavHostFragment.create(R.navigation.mobile_navigation);
+        fragmentTransaction.replace(R.id.nav_host_fragment,host).setPrimaryNavigationFragment(host).commit();*//*
+        navControllerChange.navigate(R.id.nav_outStanding);
+    }*/
+
+    public void closeApplication(){
+        finishAffinity();
+    }
+
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
