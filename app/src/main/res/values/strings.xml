@@ -16,8 +16,24 @@
     <string name="enter_purpose">Enter purpose</string>
     <string name="submit">Submit</string>
     <string name="save">Save</string>
+    <string name="enter_village">Enter village</string>
+    <string name="enter_taluka">Enter taluka</string>
+    <string name="enter_district">Enter district</string>
+    <string name="select_state">Select State</string>
+    <string name="enter_country">Enter country</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="We_need_permission">We need permission to capture images</string>
+    <string name="We_need_permission_Audio">We need permission to capture audio</string>
+    <string name="Please_permit_the_permission_through">Please permit the permission through</string>
+    <string name="Settings_screen">Settings screen.</string>
+    <string name="Permit_Manually">Permit Manually</string>
+    <string name="select_file">Select File.</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel">Cancel</string>
 
 
+    <string name="menu_home">Home</string>
     <string name="menu_outstanding">Outstanding</string>
     <string name="menu_payment_received">Payment received</string>
     <string name="menu_sale">Sale</string>
@@ -29,7 +45,6 @@
     <string name="menu_setting">Setting</string>
     <string name="menu_logout">Logout</string>
 
-    <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_tools">Tools</string>

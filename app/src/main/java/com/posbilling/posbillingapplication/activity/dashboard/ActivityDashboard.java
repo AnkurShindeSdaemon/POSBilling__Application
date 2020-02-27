@@ -71,8 +71,8 @@ public class ActivityDashboard extends BaseActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_outStanding, R.id.nav_payment_received, R.id.nav_sale,
-                R.id.nav_expenses, R.id.nav_reports, R.id.nav_other,R.id.nav_setting)
+                R.id.nav_home,R.id.nav_outStanding, R.id.nav_payment_received, R.id.nav_sale,
+                R.id.nav_expenses, R.id.nav_reports, R.id.nav_other,R.id.nav_setting,R.id.nav_add_customer)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

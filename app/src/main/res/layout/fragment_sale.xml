@@ -48,7 +48,7 @@
                 android:fontFamily="@font/myriadproboldsemiextended"
                 android:paddingLeft="@dimen/_10sdp"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold"
                 android:paddingRight="@dimen/_5sdp" />
         </RelativeLayout>
@@ -98,7 +98,7 @@
                 android:maxLength="10"
                 android:paddingLeft="@dimen/_10sdp"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_13sdp"
                 android:fontFamily="@font/myriadproboldsemiextended"
                 android:textStyle="bold"
                 android:paddingRight="@dimen/_5sdp" />
@@ -132,6 +132,8 @@
                 android:id="@+id/imageview_purpose"
                 android:layout_width="@dimen/_27sdp"
                 android:layout_height="@dimen/_27sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:src="@drawable/ic_user" />
@@ -139,16 +141,15 @@
             <EditText
                 android:id="@+id/edittext_enterpurpose"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_toRightOf="@+id/imageview_purpose"
                 android:background="@null"
                 android:hint="@string/enter_purpose"
-                android:singleLine="true"
-                android:maxLines="1"
                 android:fontFamily="@font/myriadproboldsemiextended"
                 android:paddingLeft="@dimen/_10sdp"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold"
                 android:paddingRight="@dimen/_5sdp" />
         </RelativeLayout>
