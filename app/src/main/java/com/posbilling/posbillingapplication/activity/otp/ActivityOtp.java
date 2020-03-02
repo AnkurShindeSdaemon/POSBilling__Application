@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 
 import com.posbilling.posbillingapplication.R;
 import com.posbilling.posbillingapplication.activity.dashboard.ActivityDashboard;
-import com.posbilling.posbillingapplication.utility.BaseActivity;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
+import com.posbilling.posbillingapplication.lib.BaseActivity;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 import com.posbilling.posbillingapplication.utility.Utility;
 
 import butterknife.BindView;

@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.utility;
+package com.posbilling.posbillingapplication.lib;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -11,13 +11,14 @@ import android.os.Build;
 import android.os.Bundle;
 
 import com.posbilling.posbillingapplication.R;
+import com.posbilling.posbillingapplication.utility.APIModule;
 
 import java.util.Timer;
 
 public class AppPOS extends Application implements Application.ActivityLifecycleCallbacks {
 
     private static final String TAG = AppPOS.class.getSimpleName();
-  //  private static APIComponent apiComponent;
+    private static APIComponent apiComponent;
     Intent locationServiceIntent;
     Timer timer;
     Double latitude = 0.0;
@@ -33,6 +34,10 @@ public class AppPOS extends Application implements Application.ActivityLifecycle
         super.onCreate();
         registerActivityLifecycleCallbacks(this);
         initialize();
+    }
+
+    public APIComponent getAPIComponent() {
+        return apiComponent;
     }
 
     private boolean isMyServiceRunning(Class<?> serviceClass) {
@@ -54,7 +59,7 @@ public class AppPOS extends Application implements Application.ActivityLifecycle
 
 
     private void initialize() {
-       // apiComponent = DaggerAPIComponent.builder().aPIModule(new APIModule(this)).build();
+        apiComponent = DaggerAPIComponent.builder().aPIModule(new APIModule(this)).build();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             String channel_id = getString(R.string.app_name);
             String channel_name = getString(R.string.app_name);

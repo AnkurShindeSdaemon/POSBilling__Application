@@ -1,8 +1,8 @@
 package com.posbilling.posbillingapplication.activity.dashboard.ui.home;
 
 import com.posbilling.posbillingapplication.R;
-import com.posbilling.posbillingapplication.utility.BaseFragment;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
+import com.posbilling.posbillingapplication.lib.BaseFragment;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 
 /**
  * Created by Ankur Shinde on 26,February,2020

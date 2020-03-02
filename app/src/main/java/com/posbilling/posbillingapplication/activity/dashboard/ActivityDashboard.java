@@ -21,8 +21,8 @@ import com.google.android.material.internal.NavigationMenuView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.posbilling.posbillingapplication.R;
-import com.posbilling.posbillingapplication.utility.BaseActivity;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
+import com.posbilling.posbillingapplication.lib.BaseActivity;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 
 import butterknife.BindView;
 
@@ -72,7 +72,7 @@ public class ActivityDashboard extends BaseActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,R.id.nav_outStanding, R.id.nav_payment_received, R.id.nav_sale,
-                R.id.nav_expenses, R.id.nav_reports, R.id.nav_other,R.id.nav_setting,R.id.nav_add_customer)
+                R.id.nav_expenses, R.id.nav_reports, R.id.nav_other,R.id.nav_setting,R.id.nav_add_customer,R.id.nav_help)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_mail"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/white_curve_corner_background">
+
+        <ImageView
+            android:id="@+id/imageview_mail"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_user" />
+
+        <TextView
+            android:id="@+id/textview_mail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_toRightOf="@+id/imageview_mail"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/myriadproboldsemiextended"
+            android:text="@string/contact_mail"
+            android:maxLength="300"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_below="@id/relativelayout_mail"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/white_curve_corner_background">
+
+        <ImageView
+            android:id="@+id/imageview_ContactOne"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_user" />
+
+        <TextView
+            android:id="@+id/textview_contactOne"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_toRightOf="@+id/imageview_ContactOne"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/myriadproboldsemiextended"
+            android:text="@string/contact_one"
+            android:maxLength="300"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@id/imageview_ContactOne"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_user" />
+
+        <TextView
+            android:layout_below="@id/imageview_ContactOne"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_toRightOf="@+id/imageview_ContactOne"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/myriadproboldsemiextended"
+            android:text="@string/contact_two"
+            android:maxLength="300"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

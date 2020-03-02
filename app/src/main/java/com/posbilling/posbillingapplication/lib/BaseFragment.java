@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.utility;
+package com.posbilling.posbillingapplication.lib;
 
 import android.Manifest;
 import android.app.Activity;
@@ -32,6 +32,8 @@ import androidx.fragment.app.Fragment;
 import androidx.loader.content.CursorLoader;
 
 import com.posbilling.posbillingapplication.R;
+import com.posbilling.posbillingapplication.utility.PermissionUtils;
+import com.posbilling.posbillingapplication.utility.Utility;
 
 import java.util.ArrayList;
 

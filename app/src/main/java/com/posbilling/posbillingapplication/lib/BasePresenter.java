@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.utility;
+package com.posbilling.posbillingapplication.lib;
 
 public interface BasePresenter {
 

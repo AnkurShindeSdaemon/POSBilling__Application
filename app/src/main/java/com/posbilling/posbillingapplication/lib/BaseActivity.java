@@ -1,21 +1,26 @@
-package com.posbilling.posbillingapplication.utility;
+package com.posbilling.posbillingapplication.lib;
 
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.posbilling.posbillingapplication.BuildConfig;
+
 import java.util.Locale;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity implements BaseView {
     private Unbinder unbinder;
+    private APIComponent apiComponent;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,8 +30,21 @@ public abstract class BaseActivity extends AppCompatActivity {
             unbinder = ButterKnife.bind(this);
         } else
             showDebugToast("Get Layout Not Set");
+        apiComponent = ((AppPOS) getApplication()).getAPIComponent();
 
+    }
 
+    @Override
+    public APIComponent getAPIComponent() {
+        return apiComponent;
+    }
+
+    @Override
+    protected void onPause() {
+        if (getPresenter() != null && apiComponent != null) {
+            getPresenter().onPause();
+        }
+        super.onPause();
     }
 
     @Override

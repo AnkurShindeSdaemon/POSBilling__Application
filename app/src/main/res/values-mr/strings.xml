@@ -13,6 +13,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="enter_customer_name">ग्राहक नाव प्रविष्ट करा.</string>
+    <string name="enter_owner_name">मालकाचे नाव प्रविष्ट करा.</string>
+    <string name="buisness_name">व्यवसायाचे नाव.</string>
+    <string name="shop_id">Shop Id</string>
     <string name="enter_amount">रक्कम प्रविष्ट करा.</string>
     <string name="enter_purpose">हेतू प्रविष्ट करा.</string>
     <string name="submit">Sumit</string>
@@ -63,5 +66,13 @@
     <string name="menu_help">Help</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_logout">Logout</string>
+
+    <string name="contact_mail">shelargauri10@gmail.com</string>
+    <string name="contact_one">+91 72768 38431</string>
+    <string name="contact_two">+91 91453 20664</string>
+    <string name="Total_Customers">एकूण ग्राहक</string>
+    <string name="Total_Outstanding">एकूण थकबाकी</string>
+    <string name="search">शोधा</string>
+    <string name="outstanding_summary">थकबाकी सारांश</string>
 
 </resources>

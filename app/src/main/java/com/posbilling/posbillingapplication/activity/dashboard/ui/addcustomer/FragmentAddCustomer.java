@@ -30,8 +30,8 @@ import com.posbilling.posbillingapplication.R;
 import com.posbilling.posbillingapplication.activity.dashboard.ActivityDashboard;
 import com.posbilling.posbillingapplication.interfaceclick.OnStateListClick;
 import com.posbilling.posbillingapplication.model.StateModel;
-import com.posbilling.posbillingapplication.utility.BaseFragment;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
+import com.posbilling.posbillingapplication.lib.BaseFragment;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 import com.posbilling.posbillingapplication.utility.Utility;
 
 import java.io.ByteArrayOutputStream;
@@ -116,7 +116,6 @@ public class FragmentAddCustomer extends BaseFragment implements OnStateListClic
     void imageview_edit_pic() {
         takeProfilePicturefromFragment(mContext);
     }
-
 
     @Override
     protected BasePresenter getPresenter() {
@@ -215,7 +214,7 @@ public class FragmentAddCustomer extends BaseFragment implements OnStateListClic
 
     private void filter(String text) {
         filteredStateList.clear();
-        try {
+
             for (StateModel item : secondStateList) {
                 if (item != null) {
                     if (languageCode.equalsIgnoreCase(languageCodeMarathi)) {
@@ -236,9 +235,7 @@ public class FragmentAddCustomer extends BaseFragment implements OnStateListClic
                 /*                filteredStateList.addAll(stateList);*/
             }
             stateListAdapter.filterList(filteredStateList);
-        } catch (Exception a) {
 
-        }
     }
 
     @Override

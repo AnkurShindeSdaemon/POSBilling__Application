@@ -12,8 +12,8 @@ import androidx.annotation.Nullable;
 
 import com.posbilling.posbillingapplication.R;
 import com.posbilling.posbillingapplication.activity.dashboard.ActivityDashboard;
-import com.posbilling.posbillingapplication.utility.BaseFragment;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
+import com.posbilling.posbillingapplication.lib.BaseFragment;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 
 import java.util.Calendar;
 

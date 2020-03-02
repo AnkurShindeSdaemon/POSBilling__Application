@@ -10,16 +10,17 @@ import androidx.annotation.Nullable;
 
 import com.posbilling.posbillingapplication.R;
 import com.posbilling.posbillingapplication.activity.otp.ActivityOtp;
-import com.posbilling.posbillingapplication.utility.BaseActivity;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
+import com.posbilling.posbillingapplication.lib.BaseActivity;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 import com.posbilling.posbillingapplication.utility.Utility;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class ActivityLogin extends BaseActivity {
+public class ActivityLogin extends BaseActivity implements LoginContracter.View{
 
     private View view;
+    private LoginPresenter mPresenter;
 
     @BindView(R.id.edittext_number)
     EditText edittext_number;
@@ -49,7 +50,7 @@ public class ActivityLogin extends BaseActivity {
 
     @Override
     protected BasePresenter getPresenter() {
-        return null;
+        return mPresenter;
     }
 
     @Override
@@ -59,6 +60,6 @@ public class ActivityLogin extends BaseActivity {
 
     @Override
     protected void setPresenter() {
-
+        mPresenter = new LoginPresenter(this);
     }
 }

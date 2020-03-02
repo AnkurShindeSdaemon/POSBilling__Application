@@ -8,8 +8,8 @@ import android.view.WindowManager;
 
 import com.posbilling.posbillingapplication.R;
 import com.posbilling.posbillingapplication.activity.login.ActivityLogin;
-import com.posbilling.posbillingapplication.utility.BaseActivity;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
+import com.posbilling.posbillingapplication.lib.BaseActivity;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 import com.posbilling.posbillingapplication.utility.Utility;
 
 import static com.posbilling.posbillingapplication.utility.Constants.LOGPOS;

@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 import com.google.gson.Gson;
+import com.posbilling.posbillingapplication.lib.AppPOS;
+import com.posbilling.posbillingapplication.retrofit.CustomRetroRequest;
 
 import javax.inject.Singleton;
 

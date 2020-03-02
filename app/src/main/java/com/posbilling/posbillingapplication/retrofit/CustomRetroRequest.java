@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.utility;
+package com.posbilling.posbillingapplication.retrofit;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,14 +7,10 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CustomRetroRequest {
-    //     public final String baseUrl = "http://103.51.153.235/moulin_dev/index.php/api/"; //// developement
-    // public final String baseUrl = "http://157.230.89.189/staging/index.php/api/";    ///// staging
-    // public final String baseUrl = "http://157.230.89.189/live/index.php/api/";     //// stagin 2
-    public final String baseUrl = "http://cms.iicebreakers.com/live/index.php/api/";    //// live
-
+    public final String baseUrl = "https://ramu.sdaemon.com/api/";
     private static CustomRetroRequest customRetroRequest = null;
     public Retrofit retrofit = null;
-
+//Login/ Ankur
     /**
      * @return Instance of CustomRetroRequest class
      */
@@ -26,10 +22,10 @@ public class CustomRetroRequest {
     /**
      * @return Instance of RetrofitAPI class
      */
-    public RetrofitAPI getBaseUrl() {
+    public RetrofitAPI getBaseUrl(String controller) {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(baseUrl)
+                    .baseUrl(baseUrl+controller)
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(getClient())
                     .build();

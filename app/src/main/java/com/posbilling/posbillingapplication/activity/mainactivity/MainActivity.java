@@ -2,9 +2,7 @@ package com.posbilling.posbillingapplication.activity.mainactivity;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -13,9 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.posbilling.posbillingapplication.R;
-import com.posbilling.posbillingapplication.utility.BaseActivity;
-import com.posbilling.posbillingapplication.utility.BasePresenter;
-import com.posbilling.posbillingapplication.utility.Constants;
+import com.posbilling.posbillingapplication.lib.BaseActivity;
+import com.posbilling.posbillingapplication.lib.BasePresenter;
 
 import java.util.Locale;
 
