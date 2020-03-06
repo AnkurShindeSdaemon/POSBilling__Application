@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.model;
+package com.posbilling.posbillingapplication.model.response;
 
 import com.google.gson.annotations.SerializedName;
 

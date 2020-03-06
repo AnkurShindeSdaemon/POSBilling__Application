@@ -93,9 +93,6 @@ public class AppPOS extends Application implements Application.ActivityLifecycle
     }
 
 
-    /*public APIComponent getAPIComponent() {
-        return apiComponent;
-    }*/
 
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {

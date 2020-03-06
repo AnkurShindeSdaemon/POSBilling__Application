@@ -1,22 +1,15 @@
 package com.posbilling.posbillingapplication.retrofit;
 
+import com.posbilling.posbillingapplication.model.request.LoginParams;
+import com.posbilling.posbillingapplication.model.response.LoginResponse;
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+
 public interface RetrofitAPI {
 
-    /*@FormUrlEncoded
-    @POST("peopleList")
-    Call<PeopleAroundYou> getPeopleAroundYou(@Field("userId") String userId,
-                                             @Field("privateKey") String privateKey,
-                                             @Field("currentlat") String currentlat,
-                                             @Field("currentlong") String currentlong,
-                                             @Field("placelat") String placelat,
-                                             @Field("placelong") String placelong,
-                                             @Field("placeName") String placename,
-                                             @Field("placeId") String placeId);*/
-
-    /*@GET()
-    Call<"LoginResponse"> getLogin();*/
-
+    //https://ramu.sdaemon.com/api/Login/UserLogin
+    @POST("UserLogin")
+    Call<LoginResponse> getLogin(@Body LoginParams loginParams);
 }
-
-
-

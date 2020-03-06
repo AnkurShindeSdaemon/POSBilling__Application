@@ -31,6 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         } else
             showDebugToast("Get Layout Not Set");
         apiComponent = ((AppPOS) getApplication()).getAPIComponent();
+        setPresenter();
 
     }
 
@@ -63,9 +64,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     public void showDebugToast(String message) {
         if (BuildConfig.DEBUG) {
-//            Toast.makeText(this, getClass().getSimpleName() + "  " + message, Toast.LENGTH_LONG).show();
             Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-
             Log.i("DEBUG", message);
         }
     }

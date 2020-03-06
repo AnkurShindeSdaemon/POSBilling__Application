@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.net.ConnectivityManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 
@@ -13,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import static com.posbilling.posbillingapplication.utility.Constants.DEVICEIDCOMMANID;
 import static com.posbilling.posbillingapplication.utility.Constants.LANGUAGECODE;
 import static com.posbilling.posbillingapplication.utility.Constants.LOGPOS;
 import static com.posbilling.posbillingapplication.utility.Constants.POSBILLINGPREFERENCE;
@@ -25,6 +27,12 @@ public class Utility {
 
     public static Utility getInstance() {
         return utility == null ? utility = new Utility() : utility;
+    }
+
+
+    private String generateCommanDeviceId(Context mContext) {
+        return Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
     }
 
     public boolean isOnline(Context context) {
@@ -85,7 +93,7 @@ public class Utility {
     }
 
 
-    //set locale
+    //setting language locale
     public void localisation(Context mContext,String language_key) {
         Locale locale = new Locale(language_key);
         Locale.setDefault(locale);
@@ -94,4 +102,27 @@ public class Utility {
         mContext.getResources().updateConfiguration(config,
                 mContext.getResources().getDisplayMetrics());
     }
+
+    //setting device id
+    public void setDeviceId(Context mContext, String deviceId) {
+        sharedPreferences = mContext.getSharedPreferences(POSBILLINGPREFERENCE, Context.MODE_PRIVATE);
+        if (sharedPreferences!=null) {
+            editor = sharedPreferences.edit();
+            editor.putString(DEVICEIDCOMMANID, deviceId);
+            editor.commit();
+        }else{
+
+        }
+    }
+
+    //getting device id
+    public String getDeviceId(Context mContext){
+        try {
+            sharedPreferences = mContext.getSharedPreferences(POSBILLINGPREFERENCE, Context.MODE_PRIVATE);
+        }catch (Exception ae){
+            Log.e(LOGPOS, "getDeviceId: "+ae.getMessage());
+        }
+        return sharedPreferences.getString(DEVICEIDCOMMANID,"");
+    }
+
 }

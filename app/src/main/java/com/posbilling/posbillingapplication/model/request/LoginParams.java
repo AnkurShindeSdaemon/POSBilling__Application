@@ -1,4 +1,4 @@
-package com.posbilling.posbillingapplication.model;
+package com.posbilling.posbillingapplication.model.request;
 
 /**
  * Created by Android PC (Ankur) on 02,March,2020
