@@ -19,5 +19,9 @@
         <item name="android:statusBarColor">@color/mediumBlue</item>
     </style>
 
+    <style name="MyGravity" parent="android:Theme.Material.Dialog" >
+        <item name="android:colorAccent">@color/colorPrimary</item>
+    </style>
+
 
 </resources>

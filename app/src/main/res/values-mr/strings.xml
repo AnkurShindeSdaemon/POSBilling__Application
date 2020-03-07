@@ -74,5 +74,12 @@
     <string name="Total_Outstanding">एकूण थकबाकी</string>
     <string name="search">शोधा</string>
     <string name="outstanding_summary">थकबाकी सारांश</string>
+    <string name="Customer_Id">Customer Id :</string>
+    <string name="Merge">Merge</string>
+    <string name="Entry">Entry</string>
+    <string name="litre">Litre</string>
+    <string name="Debit">Debit</string>
+    <string name="Credit">Credit</string>
+    <string name="outstanding_list">Outstanding List</string>
 
 </resources>

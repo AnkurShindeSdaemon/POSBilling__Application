@@ -19,6 +19,8 @@ import com.posbilling.posbillingapplication.utility.Utility;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+import static com.posbilling.posbillingapplication.utility.Constants.MOBILENUMBER;
+
 public class ActivityLogin extends BaseActivity implements LoginContracter.View{
 
     private View view;
@@ -39,7 +41,11 @@ public class ActivityLogin extends BaseActivity implements LoginContracter.View{
                 edittext_number.setError(getString(R.string.please_enter_10_digit_mobile_number));
             }else{
 
-                mPresenter.postLogin(android_id,edittext_number.getText().toString());
+                Intent intent = new Intent(this, ActivityOtp.class);
+                intent.putExtra(MOBILENUMBER,edittext_number.getText().toString());
+                startActivity(intent);
+               // Utility.getInstance().showProgressDialogue(ActivityLogin.this);
+                //mPresenter.postLogin(android_id,edittext_number.getText().toString());
             }
         }else {
             Utility.getInstance().showSnackbar(view,getString(R.string.please_check_internet));
@@ -81,14 +87,16 @@ public class ActivityLogin extends BaseActivity implements LoginContracter.View{
     //login Api Success
     @Override
     public void loginSuccess(LoginResponse loginResponse) {
+        Utility.getInstance().dismissProgress();
         Intent intent = new Intent(this, ActivityOtp.class);
-        intent.putExtra("Ankur",edittext_number.getText().toString());
+        intent.putExtra(MOBILENUMBER,edittext_number.getText().toString());
         startActivity(intent);
     }
 
     ///Login Api failure
     @Override
     public void loginFailure(String message) {
+        Utility.getInstance().dismissProgress();
         showDebugToast(message);
     }
 }

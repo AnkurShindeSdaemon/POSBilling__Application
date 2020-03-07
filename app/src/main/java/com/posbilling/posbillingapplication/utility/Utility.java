@@ -1,14 +1,18 @@
 package com.posbilling.posbillingapplication.utility;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.posbilling.posbillingapplication.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -24,6 +28,7 @@ public class Utility {
     private static Utility utility = null;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    private  ProgressDialog pd;
 
     public static Utility getInstance() {
         return utility == null ? utility = new Utility() : utility;
@@ -123,6 +128,21 @@ public class Utility {
             Log.e(LOGPOS, "getDeviceId: "+ae.getMessage());
         }
         return sharedPreferences.getString(DEVICEIDCOMMANID,"");
+    }
+
+
+    public void showProgressDialogue(Context mContext){
+        pd = new ProgressDialog(mContext, R.style.MyGravity);
+        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);       // Set progress dialog style horizontal
+        pd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));       // Set the progress dialog background color transparent
+        pd.setCancelable(false);
+        pd.show();
+    }
+
+    public void dismissProgress(){
+        if(pd!=null) {
+            pd.dismiss();
+        }
     }
 
 }

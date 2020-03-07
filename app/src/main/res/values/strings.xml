@@ -70,6 +70,13 @@
     <string name="Total_Outstanding">Total Outstanding</string>
     <string name="search">Search</string>
     <string name="outstanding_summary">Outstanding Summary</string>
+    <string name="Customer_Id">Customer Id :</string>
+    <string name="Merge">Merge</string>
+    <string name="Entry">Entry</string>
+    <string name="litre">Litre</string>
+    <string name="Debit">Debit</string>
+    <string name="Credit">Credit</string>
+    <string name="outstanding_list">Outstanding List</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

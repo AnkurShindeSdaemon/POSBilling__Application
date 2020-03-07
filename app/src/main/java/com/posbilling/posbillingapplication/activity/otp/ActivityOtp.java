@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -19,6 +20,9 @@ import com.posbilling.posbillingapplication.utility.Utility;
 import butterknife.BindView;
 import butterknife.OnClick;
 import in.aabhasjindal.otptextview.OtpTextView;
+
+import static com.posbilling.posbillingapplication.utility.Constants.LOGPOS;
+import static com.posbilling.posbillingapplication.utility.Constants.MOBILENUMBER;
 
 public class ActivityOtp extends BaseActivity implements OtpContracter.View{
     private View view;
@@ -75,9 +79,10 @@ public class ActivityOtp extends BaseActivity implements OtpContracter.View{
 
     public void getIntentData(){
         if(getIntent() != null) {
-            String mnumber = getIntent().getStringExtra("Ankur");
+            String mnumber = getIntent().getStringExtra(MOBILENUMBER);
             mNumber = mnumber;
         }else{
+            Log.e(LOGPOS,"Intent is null");
             Toast.makeText(this,"Intent is null",Toast.LENGTH_SHORT).show();
         }
     }
